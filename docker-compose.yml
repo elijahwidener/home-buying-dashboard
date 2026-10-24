@@ -1,0 +1,21 @@
+name: homebuy
+
+services:
+  app:
+    build: .
+    image: home-dashboard:local
+    container_name: home_dashboard
+    restart: unless-stopped
+    ports:
+      - '3081:3000'
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      TZ: America/New_York
+    volumes:
+      # Named volume: SQLite file locking is unreliable on Windows/NTFS bind mounts.
+      - homedata:/data
+
+volumes:
+  homedata:

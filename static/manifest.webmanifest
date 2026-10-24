@@ -1,0 +1,16 @@
+{
+	"name": "Home Buying",
+	"short_name": "Home",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"background_color": "#12151a",
+	"theme_color": "#12151a",
+	"icons": [
+		{
+			"src": "/icon.svg",
+			"sizes": "any",
+			"type": "image/svg+xml"
+		}
+	]
+}
